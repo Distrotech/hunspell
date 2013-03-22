@@ -1,3 +1,8 @@
+2013-03-22  gettextize  <bug-gnu-gettext@gnu.org>
+
+	* Makefile.am (SUBDIRS): Remove intl.
+	* configure.ac (AM_GNU_GETTEXT_VERSION): Bump to 0.18.2.
+
 2011-02-16 Németh László <nemeth at numbertext dot org>:
         * src/*/Makefile.am: fix library versioning, the probem reported by
           Rene Engerhald and Simon Brouwer.

@@ -96,6 +96,7 @@ CATALOGS = @CATALOGS@
 	mv t-$@ $@
 
 
+ifneq (:,$(GMSGFMT))
 all: all-@USE_NLS@
 
 all-yes: stamp-po
@@ -107,6 +108,9 @@ CHECK_MACRO_VERSION = \
 	  || { echo "*** error: gettext infrastructure mismatch: using a Makefile.in.in from gettext version $(GETTEXT_MACRO_VERSION) but the autoconf macros are from gettext version @GETTEXT_MACRO_VERSION@" 1>&2; \
 	       exit 1; \
 	     }
+else
+all:
+endif
 
 # $(srcdir)/$(DOMAIN).pot is only created when needed. When xgettext finds no
 # internationalized messages, no $(srcdir)/$(DOMAIN).pot is created (because
